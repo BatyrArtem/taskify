@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import InputField from './components/InputField';
 
 let name: string;
 let age: number | string;  
@@ -12,6 +13,7 @@ const App: React.FC = () => {
   return (
     <div className="App">
         <span className='heading'>Taskify</span>
+        <InputField />
     </div>
   );
 }
