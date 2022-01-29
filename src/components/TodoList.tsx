@@ -40,7 +40,8 @@ const TodoList:React.FC<Props> = ({todos, setTodos}:Props) => {
           (provided) => (
             <div className="todos remove"
             ref={provided.innerRef}
-            {...provided.droppableProps}>
+            {...provided.droppableProps}
+            >
       <span className="todos__heading">
           Mission Passed
         </span>
