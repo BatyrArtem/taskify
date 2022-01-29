@@ -1,5 +1,6 @@
 import React, { useRef } from 'react';
 import './styles.css';
+import { GiGunshot } from 'react-icons/gi'
 
 interface Props {
     todo: string;
@@ -23,10 +24,10 @@ const InputField: React.FC<Props> = ({todo, setTodo, handleAdd}) => {
             onChange={
             (e)=> setTodo(e.target.value)
             }
-            placeholder='Enter a task' className='input__box'
+            placeholder="Stealing stolen goods doesn't count as stealing" className='input__box'
         />
     <button className='input_submit' type='submit' >
-        Go
+    <GiGunshot />
     </button>
     </form>
   );

@@ -6,7 +6,10 @@
   display: flex; /*включаем flrx-box*/
   flex-direction: column;
   align-items: center;
-  background-color: #2f74c0;
+  /* background-color: #2f74c0;d */
+  background-image: url("./img/raider.jpg");  
+  background-size: 1750px;
+  background-position-y: -15px;
   font-family: "Neucha", cursive;
 }
 
