@@ -5,18 +5,11 @@ import TodoList from './components/TodoList';
 import { Todo } from './model';
 import { DragDropContext } from 'react-beautiful-dnd';
 
-let name: string;
-let age: number | string;  
-let isStudent: boolean;
-let hobbies: string[];
-let role: [number, string];
-
-
 const App: React.FC = () => {
+  
   const [todo, setTodo] = useState<string>("");
   const [todos, setTodos] = useState<Todo[]>([]);
-  const [completedTodos, setCompletedTodos] = useState<Todo[]>([])
-
+  const [completedTodos, setCompletedTodos] = useState<Todo[]>([]);
 
   const handleAdd = (e: React.FormEvent) => {
     e.preventDefault();
@@ -41,7 +34,6 @@ const App: React.FC = () => {
          />
     </div>
     </DragDropContext>
-    
   );
 }
 

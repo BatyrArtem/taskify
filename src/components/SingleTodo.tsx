@@ -1,19 +1,21 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Todo } from '../model';
 import { AiOutlineAim } from 'react-icons/ai';
-import { GiDeathSkull, GiGunshot } from 'react-icons/gi'
+import { GiDeathSkull} from 'react-icons/gi'
 import { MdVisibilityOff } from 'react-icons/md'
 import './styles.css';
+import { Draggable } from 'react-beautiful-dnd';
 
 
 type Props = {
+    index: number;
     todo: Todo,
     todos: Todo[],
     setTodos: React.Dispatch<React.SetStateAction<Todo[]>>;
 }
 
 
-const SingleTodo = ({todo, todos, setTodos}: Props) => {
+const SingleTodo = ({index, todo, todos, setTodos}: Props) => {
     const [edit, setEdit] = useState<boolean>(false);
     const [editTodo, setEditTodo] = useState<string>(todo.todo);
 
@@ -47,7 +49,16 @@ const SingleTodo = ({todo, todos, setTodos}: Props) => {
 
 
   return ( 
-    <form className='todos__single' onSubmit={(e) => handleEdit(e, todo.id)}>
+      <Draggable draggableId={todo.id.toString()} index={index}>
+        {(provided) => (
+                <form 
+                className='todos__single' 
+                onSubmit={(e) =>
+                 handleEdit(e, todo.id)}
+                 {...provided.draggableProps}
+                 {...provided.dragHandleProps}
+                 ref={provided.innerRef}
+                 >
         {edit? (
         <input 
           ref={inputRef}
@@ -80,6 +91,9 @@ const SingleTodo = ({todo, todos, setTodos}: Props) => {
                 </span>
             </div>
     </form>
+            )
+        }
+      </Draggable>
   )
 };
 
