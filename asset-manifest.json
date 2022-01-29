@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/taskify/static/css/main.e84f36d7.css",
+    "main.js": "/taskify/static/js/main.cbeb2309.js",
+    "static/media/for_backgorund.jpeg": "/taskify/static/media/for_backgorund.337c80c6f6394d950c20.jpeg",
+    "static/media/raider.jpg": "/taskify/static/media/raider.0b9d767aff1aca6937db.jpg",
+    "index.html": "/taskify/index.html",
+    "main.e84f36d7.css.map": "/taskify/static/css/main.e84f36d7.css.map",
+    "main.cbeb2309.js.map": "/taskify/static/js/main.cbeb2309.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e84f36d7.css",
+    "static/js/main.cbeb2309.js"
+  ]
+}
